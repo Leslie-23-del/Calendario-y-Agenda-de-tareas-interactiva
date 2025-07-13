@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calendario Interactivo de Tareas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <h1>📅 Calendario Académico - Ecuador</h1>
+    
+    <div class="navegacion">
+      <button onclick="cambiarMes(-1)">←</button>
+      <span id="mes-anio"></span>
+      <button onclick="cambiarMes(1)">→</button>
+    </div>
+
+    <div class="calendario" id="calendario"></div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-contenido">
+      <h3 id="fechaSeleccionada"></h3>
+      <input type="text" id="tareaTexto" placeholder="Escribe tu tarea..." />
+      <select id="materiaColor">
+        <option value="#e57373">Contabilidad</option>
+        <option value="#64b5f6">Auditoría</option>
+        <option value="#81c784">Administración</option>
+        <option value="#ffd54f">Investigación</option>
+      </select>
+      <button onclick="guardarTarea()">Guardar</button>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
