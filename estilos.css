@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #e0f0ff;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contenedor {
+  background: white;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  border-top: 40px solid #d32f2f;
+  position: relative;
+}
+
+.contenedor::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  background: black;
+  border-radius: 50%;
+  box-shadow: 60px 0 black, 120px 0 black, 180px 0 black, 240px 0 black, 300px 0 black;
+}
+
+h1 {
+  color: white;
+  margin-top: -30px;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background-color: #ccc;
+}
+
+.dia {
+  background-color: white;
+  min-height: 100px;
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  cursor: pointer;
+}
+
+.dia h4 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #d32f2f;
+}
+
+.tarea {
+  font-size: 0.8rem;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-top: 4px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.modal input,
+.modal select,
+.modal button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
